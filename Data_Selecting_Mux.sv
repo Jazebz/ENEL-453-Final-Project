@@ -4,7 +4,7 @@
 // Purpose:
 //   Selects which measurement source (XADC / PWM / R2R) is
 //   forwarded to the display or output subsystem.
-//
+// 
 // Functionality:
 //   source_select = 00 → Select XADC measurement (16-bit)
 //   source_select = 01 → Select PWM measurement (12-bit → zero-extended to 16-bit)
