@@ -1,4 +1,3 @@
-
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // auto_cal.sv  (scaled-domain calibration)
@@ -12,9 +11,6 @@
 //   - On every cycle, output = adc_scaled + offset, with saturation.
 //   - cal_switch = 0 -> output is raw adc_scaled
 //                 1 -> output is calibrated (adc_scaled + offset)
-//
-// This way, if you calibrate while both paths see the same input, their
-// *scaled* values will match closely when cal_switch = 1.
 //
 //////////////////////////////////////////////////////////////////////////////////
 

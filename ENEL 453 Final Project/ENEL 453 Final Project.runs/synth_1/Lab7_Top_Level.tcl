@@ -94,6 +94,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/git/ENEL-453-Final-Project/averager_subsystem.sv
   C:/git/ENEL-453-Final-Project/averager_subsystem2.sv
   C:/git/ENEL-453-Final-Project/bin_to_bcd.sv
+  C:/git/ENEL-453-Final-Project/cal_button_pulse.sv
   C:/git/ENEL-453-Final-Project/digit_multiplexor.sv
   C:/git/ENEL-453-Final-Project/downcounter.sv
   C:/git/ENEL-453-Final-Project/pwm.sv
