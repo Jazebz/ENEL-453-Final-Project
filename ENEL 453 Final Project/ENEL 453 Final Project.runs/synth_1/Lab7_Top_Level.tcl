@@ -88,6 +88,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/git/ENEL-453-Final-Project/R2R_mux.sv
   C:/git/ENEL-453-Final-Project/XADC_Mux.sv
   C:/git/ENEL-453-Final-Project/XADC_Subsystem.sv
+  C:/git/ENEL-453-Final-Project/auto_cal.sv
   C:/git/ENEL-453-Final-Project/averager.sv
   C:/git/ENEL-453-Final-Project/averager_pwm.sv
   C:/git/ENEL-453-Final-Project/averager_subsystem.sv

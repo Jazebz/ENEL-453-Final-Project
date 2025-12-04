@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1764882123">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1764883249">
   <File Type="PA-TCL" Name="Lab7_Top_Level.tcl"/>
   <File Type="REPORTS-TCL" Name="Lab7_Top_Level_reports.tcl"/>
   <File Type="INIT-TIMING" Name="Lab7_Top_Level_timing_summary_init.rpt"/>
@@ -143,6 +143,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../XADC_Subsystem.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../auto_cal.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
