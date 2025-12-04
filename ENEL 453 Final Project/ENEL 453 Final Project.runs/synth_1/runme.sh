@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1'
+HD_PWD='C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

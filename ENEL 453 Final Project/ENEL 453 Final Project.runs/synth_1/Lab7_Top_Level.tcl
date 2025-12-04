@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/Lab7_Top_Level.tcl"
+  variable script "C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/Lab7_Top_Level.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,8 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 set_param synth.incrementalSynthesisCache C:/Users/hxi-c/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-22852-HXI-CENTRE/incrSyn
 set_param checkpoint.writeSynthRtdsInDcp 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -67,47 +70,47 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.xpr} [current_project]
+set_property webtalk.parent_dir {C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.cache/wt} [current_project]
+set_property parent.project_path {C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {c:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.cache/ip} [current_project]
+set_property ip_output_repo {c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  {C:/Users/hxi-c/Downloads/453 Project Files/Data_Selecting_Mux.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/Data_Selection_Subsystem.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/Fall_Detector1.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/Fall_Detector2.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/Output_FSM.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/PWM_mux.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/R2R_mux.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/XADC_Mux.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/XADC_Subsystem.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/averager.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/averager_pwm.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/averager_subsystem.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/averager_subsystem2.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/bin_to_bcd.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/digit_multiplexor.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/downcounter.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/pwm.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/pwm_from_code.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/sar_adc_fsm.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/sawtooth_generator.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/sawtooth_generator2.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/sawtooth_subsystem.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/sawtooth_subsystem2.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/seven_segment_decoder.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/seven_segment_digit_selector.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/seven_segment_display_subsystem.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/switch_logic.sv}
-  {C:/Users/hxi-c/Downloads/453 Project Files/Lab7_Top_Level.sv}
+  C:/git/ENEL-453-Final-Project/Data_Selecting_Mux.sv
+  C:/git/ENEL-453-Final-Project/Data_Selection_Subsystem.sv
+  C:/git/ENEL-453-Final-Project/Fall_Detector1.sv
+  C:/git/ENEL-453-Final-Project/Fall_Detector2.sv
+  C:/git/ENEL-453-Final-Project/Output_FSM.sv
+  C:/git/ENEL-453-Final-Project/PWM_mux.sv
+  C:/git/ENEL-453-Final-Project/R2R_mux.sv
+  C:/git/ENEL-453-Final-Project/XADC_Mux.sv
+  C:/git/ENEL-453-Final-Project/XADC_Subsystem.sv
+  C:/git/ENEL-453-Final-Project/averager.sv
+  C:/git/ENEL-453-Final-Project/averager_pwm.sv
+  C:/git/ENEL-453-Final-Project/averager_subsystem.sv
+  C:/git/ENEL-453-Final-Project/averager_subsystem2.sv
+  C:/git/ENEL-453-Final-Project/bin_to_bcd.sv
+  C:/git/ENEL-453-Final-Project/digit_multiplexor.sv
+  C:/git/ENEL-453-Final-Project/downcounter.sv
+  C:/git/ENEL-453-Final-Project/pwm.sv
+  C:/git/ENEL-453-Final-Project/pwm_from_code.sv
+  C:/git/ENEL-453-Final-Project/sar_adc_fsm.sv
+  C:/git/ENEL-453-Final-Project/sawtooth_generator.sv
+  C:/git/ENEL-453-Final-Project/sawtooth_generator2.sv
+  C:/git/ENEL-453-Final-Project/sawtooth_subsystem.sv
+  C:/git/ENEL-453-Final-Project/sawtooth_subsystem2.sv
+  C:/git/ENEL-453-Final-Project/seven_segment_decoder.sv
+  C:/git/ENEL-453-Final-Project/seven_segment_digit_selector.sv
+  C:/git/ENEL-453-Final-Project/seven_segment_display_subsystem.sv
+  C:/git/ENEL-453-Final-Project/switch_logic.sv
+  C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv
 }
-read_ip -quiet {{c:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/hxi-c/Downloads/453 Project Files/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc}}]
+read_ip -quiet {{C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -118,10 +121,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/hxi-c/Downloads/453 Project Files/Basys3_Lab_7.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/hxi-c/Downloads/453 Project Files/Basys3_Lab_7.xdc}}]
+read_xdc C:/git/ENEL-453-Final-Project/Basys3_Lab_7.xdc
+set_property used_in_implementation false [get_files C:/git/ENEL-453-Final-Project/Basys3_Lab_7.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.srcs/utils_1/imports/synth_1/Lab7_Top_Level.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
