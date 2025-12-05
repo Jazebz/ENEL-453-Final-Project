@@ -10,7 +10,7 @@
 // Behaviour:
 //   - The FSM state encoding mirrors the mode_select codes directly.
 //   - current_state simply tracks the requested mode_select value.
-//   - Outputs are purely combinational functions of current_state.
+//   - Outputs are purely combinational functions of our current_state.
 //
 // Mode Encoding (mode_select / current_state):
 //   OFF_MODE : 0000  -> zero_enable = 1
