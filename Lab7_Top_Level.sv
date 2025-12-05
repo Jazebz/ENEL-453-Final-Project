@@ -223,7 +223,7 @@ module Lab7_Top_Level(
     );
 
     //==========================================================
-    // Seven-Segment Display Subsystem
+    // Seven-Segment Display Subsystem 
     //==========================================================
     seven_segment_display_subsystem SEVEN_SEGMENT_DISPLAY_inst (
         .clk           (clk_sys),
