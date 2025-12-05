@@ -33,7 +33,7 @@
 //
 // Note: This module assumes that the `selector` signal is one-hot encoded. If
 //       multiple bits in `selector` are high simultaneously, the behavior is
-//       undefined and will default to outputting 4'b0000.
+//       undefined and will default to outputting 4'b0000. 
 //------------------------------------------------------------------------------
 
 module digit_multiplexor (
