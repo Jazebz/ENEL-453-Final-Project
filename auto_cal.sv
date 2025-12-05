@@ -52,7 +52,7 @@ module auto_cal #(
     end
 
     //==================================================================
-    // 2) Apply offset with simple saturation
+    // 2) Apply offset with simple saturation 
     //==================================================================
     logic signed [WIDTH:0] adc_ext;
     logic signed [WIDTH:0] sum;
