@@ -1,5 +1,5 @@
 module downcounter_waveform #(
-    parameter int PERIOD = 1000     // Downcount start value (>0)
+    parameter int PERIOD = 1000     // Downcount start value (greater than 0)
 )(
     input  logic clk,
     input  logic reset,
