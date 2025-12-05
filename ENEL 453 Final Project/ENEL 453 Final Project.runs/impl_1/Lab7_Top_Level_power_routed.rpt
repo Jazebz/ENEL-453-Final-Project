@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu Dec  4 14:54:26 2025
+| Date             : Fri Dec  5 01:55:23 2025
 | Host             : HXI-CENTRE running 64-bit major release  (build 9200)
 | Command          : report_power -file Lab7_Top_Level_power_routed.rpt -pb Lab7_Top_Level_power_summary_routed.pb -rpx Lab7_Top_Level_power_routed.rpx
 | Design           : Lab7_Top_Level
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.102        |
+| Total On-Chip Power (W)  | 0.229        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.030        |
+| Dynamic (W)              | 0.157        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.5         |
-| Junction Temperature (C) | 25.5         |
+| Max Ambient (C)          | 83.9         |
+| Junction Temperature (C) | 26.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.006 |        3 |       --- |             --- |
-| Slice Logic             |     0.004 |     1960 |       --- |             --- |
-|   LUT as Logic          |     0.003 |      541 |     20800 |            2.60 |
+| Clocks                  |     0.007 |        5 |       --- |             --- |
+| Slice Logic             |     0.004 |     1986 |       --- |             --- |
+|   LUT as Logic          |     0.003 |      542 |     20800 |            2.61 |
 |   CARRY4                |    <0.001 |       67 |      8150 |            0.82 |
-|   Register              |    <0.001 |      918 |     41600 |            2.21 |
+|   Register              |    <0.001 |      942 |     41600 |            2.26 |
 |   LUT as Shift Register |    <0.001 |      256 |      9600 |            2.67 |
-|   Others                |     0.000 |       42 |       --- |             --- |
-| Signals                 |     0.004 |     1472 |       --- |             --- |
-| DSPs                    |     0.003 |        3 |        90 |            3.33 |
-| I/O                     |     0.011 |       36 |       106 |           33.96 |
+|   Others                |     0.000 |       44 |       --- |             --- |
+| Signals                 |     0.005 |     1500 |       --- |             --- |
+| MMCM                    |     0.122 |        1 |         5 |           20.00 |
+| DSPs                    |     0.004 |        3 |        90 |            3.33 |
+| I/O                     |     0.013 |       36 |       106 |           33.96 |
 | XADC                    |     0.002 |        1 |       --- |             --- |
 | Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.102 |          |           |                 |
+| Total                   |     0.229 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.027 |       0.018 |      0.010 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.031 |       0.021 |      0.010 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.081 |       0.068 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -127,11 +128,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------------+--------+-----------------+
-| Clock       | Domain | Constraint (ns) |
-+-------------+--------+-----------------+
-| sys_clk_pin | clk    |            10.0 |
-+-------------+--------+-----------------+
++----------------------+-----------------------------------+-----------------+
+| Clock                | Domain                            | Constraint (ns) |
++----------------------+-----------------------------------+-----------------+
+| clk100               | clk                               |            10.0 |
+| clk_out1_clk_wiz_0_1 | u_clk_wiz/inst/clk_out1_clk_wiz_0 |             8.7 |
+| clkfbout_clk_wiz_0_1 | u_clk_wiz/inst/clkfbout_clk_wiz_0 |            20.0 |
++----------------------+-----------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -143,16 +146,19 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| Lab7_Top_Level             |     0.030 |
+| Lab7_Top_Level             |     0.157 |
 |   PWM_subsystem_inst       |     0.006 |
+|     PWM_Ramp               |     0.001 |
 |     PWM_averager_subsystem |     0.004 |
-|       PWM_AVERAGER         |     0.002 |
-|   R2R_subsystem_inst       |     0.004 |
+|       PWM_AVERAGER         |     0.003 |
+|   R2R_subsystem_inst       |     0.005 |
 |     R2R_averager_subsystem |     0.003 |
 |       R2R_AVERAGER         |     0.001 |
-|   XADC_subsystem_inst      |     0.006 |
+|   XADC_subsystem_inst      |     0.007 |
 |     AVERAGER               |     0.003 |
 |     XADC_INST              |     0.002 |
+|   u_clk_wiz                |     0.123 |
+|     inst                   |     0.123 |
 +----------------------------+-----------+
 
 

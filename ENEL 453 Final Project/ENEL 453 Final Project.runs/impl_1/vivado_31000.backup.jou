@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Dec  4 15:31:22 2025
+# Process ID         : 31000
+# Current directory  : C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/impl_1
+# Command line       : vivado.exe -log Lab7_Top_Level.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Lab7_Top_Level.tcl -notrace
+# Log file           : C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/impl_1/Lab7_Top_Level.vdi
+# Journal file       : C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/impl_1\vivado.jou
+# Running On         : HXI-CENTRE
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900HK
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34015 MB
+# Swap memory        : 8053 MB
+# Total Virtual      : 42068 MB
+# Available Virtual  : 11932 MB
+#-----------------------------------------------------------
+source Lab7_Top_Level.tcl -notrace

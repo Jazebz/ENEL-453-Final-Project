@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Dec  4 14:52:57 2025
-# Process ID         : 5464
+# Start of session at: Fri Dec  5 01:53:47 2025
+# Process ID         : 20220
 # Current directory  : C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1
 # Command line       : vivado.exe -log Lab7_Top_Level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab7_Top_Level.tcl
 # Log file           : C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/Lab7_Top_Level.vds
@@ -19,7 +19,7 @@
 # Host memory        : 34015 MB
 # Swap memory        : 8053 MB
 # Total Virtual      : 42068 MB
-# Available Virtual  : 11373 MB
+# Available Virtual  : 10786 MB
 #-----------------------------------------------------------
 source Lab7_Top_Level.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental {C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.srcs/utils_1/imports/synth_1/Lab7_Top_Level.dcp}
@@ -34,11 +34,13 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13576
+INFO: [Synth 8-7075] Helper process launched with PID 3552
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1037.043 ; gain = 467.656
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1038.570 ; gain = 467.664
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Lab7_Top_Level' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/.Xil/Vivado-20220-HXI-CENTRE/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/.Xil/Vivado-20220-HXI-CENTRE/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'cal_button_pulse' [C:/git/ENEL-453-Final-Project/cal_button_pulse.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'cal_button_pulse' (0#1) [C:/git/ENEL-453-Final-Project/cal_button_pulse.sv:9]
 INFO: [Synth 8-6157] synthesizing module 'PWM_subsystem' [C:/git/ENEL-453-Final-Project/sawtooth_subsystem.sv:18]
@@ -72,15 +74,15 @@ INFO: [Synth 8-6157] synthesizing module 'pwm_from_code' [C:/git/ENEL-453-Final-
 INFO: [Synth 8-6155] done synthesizing module 'pwm_from_code' (0#1) [C:/git/ENEL-453-Final-Project/pwm_from_code.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'PWM_subsystem' (0#1) [C:/git/ENEL-453-Final-Project/sawtooth_subsystem.sv:18]
 INFO: [Synth 8-6157] synthesizing module 'XADC_Subsystem' [C:/git/ENEL-453-Final-Project/XADC_Subsystem.sv:2]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/.Xil/Vivado-5464-HXI-CENTRE/realtime/xadc_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/.Xil/Vivado-5464-HXI-CENTRE/realtime/xadc_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/.Xil/Vivado-20220-HXI-CENTRE/realtime/xadc_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/.Xil/Vivado-20220-HXI-CENTRE/realtime/xadc_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'averager' [C:/git/ENEL-453-Final-Project/averager.sv:1]
 	Parameter power bound to: 32'sb00000000000000000000000000001000 
 	Parameter N bound to: 32'sb00000000000000000000000000010000 
 INFO: [Synth 8-6155] done synthesizing module 'averager' (0#1) [C:/git/ENEL-453-Final-Project/averager.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'XADC_Subsystem' (0#1) [C:/git/ENEL-453-Final-Project/XADC_Subsystem.sv:2]
-WARNING: [Synth 8-7071] port 'ready_pulse' of module 'XADC_Subsystem' is unconnected for instance 'XADC_subsystem_inst' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:119]
-WARNING: [Synth 8-7023] instance 'XADC_subsystem_inst' of module 'XADC_Subsystem' has 8 connections declared, but only 7 given [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:119]
+WARNING: [Synth 8-7071] port 'ready_pulse' of module 'XADC_Subsystem' is unconnected for instance 'XADC_subsystem_inst' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:135]
+WARNING: [Synth 8-7023] instance 'XADC_subsystem_inst' of module 'XADC_Subsystem' has 8 connections declared, but only 7 given [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:135]
 INFO: [Synth 8-6157] synthesizing module 'R2R_subsystem' [C:/git/ENEL-453-Final-Project/sawtooth_subsystem2.sv:24]
 INFO: [Synth 8-6157] synthesizing module 'sawtooth_generator2' [C:/git/ENEL-453-Final-Project/sawtooth_generator2.sv:1]
 	Parameter WIDTH bound to: 32'sb00000000000000000000000000001000 
@@ -114,13 +116,13 @@ INFO: [Synth 8-6155] done synthesizing module 'Data_Selecting_Mux' (0#1) [C:/git
 INFO: [Synth 8-6157] synthesizing module 'switch_logic' [C:/git/ENEL-453-Final-Project/switch_logic.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'switch_logic' (0#1) [C:/git/ENEL-453-Final-Project/switch_logic.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'Menu_Subsystem' (0#1) [C:/git/ENEL-453-Final-Project/Data_Selection_Subsystem.sv:27]
-WARNING: [Synth 8-689] width (16) of port connection 'R2R_raw' does not match port width (8) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:182]
-WARNING: [Synth 8-689] width (16) of port connection 'R2R_averaged' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:183]
-WARNING: [Synth 8-689] width (16) of port connection 'R2R_scaled' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:184]
-WARNING: [Synth 8-689] width (16) of port connection 'XADC_raw' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:185]
-WARNING: [Synth 8-689] width (16) of port connection 'PWM_raw' does not match port width (8) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:188]
-WARNING: [Synth 8-689] width (16) of port connection 'PWM_averaged' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:189]
-WARNING: [Synth 8-689] width (16) of port connection 'PWM_scaled' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:190]
+WARNING: [Synth 8-689] width (16) of port connection 'R2R_raw' does not match port width (8) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:198]
+WARNING: [Synth 8-689] width (16) of port connection 'R2R_averaged' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:199]
+WARNING: [Synth 8-689] width (16) of port connection 'R2R_scaled' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:200]
+WARNING: [Synth 8-689] width (16) of port connection 'XADC_raw' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:201]
+WARNING: [Synth 8-689] width (16) of port connection 'PWM_raw' does not match port width (8) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:204]
+WARNING: [Synth 8-689] width (16) of port connection 'PWM_averaged' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:205]
+WARNING: [Synth 8-689] width (16) of port connection 'PWM_scaled' does not match port width (12) of module 'Menu_Subsystem' [C:/git/ENEL-453-Final-Project/Lab7_Top_Level.sv:206]
 INFO: [Synth 8-6157] synthesizing module 'bin_to_bcd' [C:/git/ENEL-453-Final-Project/bin_to_bcd.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'bin_to_bcd' (0#1) [C:/git/ENEL-453-Final-Project/bin_to_bcd.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'seven_segment_display_subsystem' [C:/git/ENEL-453-Final-Project/seven_segment_display_subsystem.sv:26]
@@ -137,53 +139,62 @@ WARNING: [Synth 8-3848] Net ready in module/entity averager_subsystem does not h
 WARNING: [Synth 8-6014] Unused sequential element ready_reg was removed.  [C:/git/ENEL-453-Final-Project/bin_to_bcd.sv:19]
 WARNING: [Synth 8-7129] Port ready in module averager_subsystem is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1159.910 ; gain = 590.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1163.504 ; gain = 592.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1159.910 ; gain = 590.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1163.504 ; gain = 592.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1159.910 ; gain = 590.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1163.504 ; gain = 592.598
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1159.910 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1163.504 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XADC_subsystem_inst/XADC_INST'
 Finished Parsing XDC File [c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XADC_subsystem_inst/XADC_INST'
+Parsing XDC File [c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Finished Parsing XDC File [c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
 Parsing XDC File [C:/git/ENEL-453-Final-Project/Basys3_Lab_7.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk100' completely overrides clock 'clk'.
+New: create_clock -period 10.000 -name clk100 [get_ports clk], [C:/git/ENEL-453-Final-Project/Basys3_Lab_7.xdc:10]
+Previous: create_clock -period 10.000 [get_ports clk], [c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 Finished Parsing XDC File [C:/git/ENEL-453-Final-Project/Basys3_Lab_7.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/git/ENEL-453-Final-Project/Basys3_Lab_7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Lab7_Top_Level_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Lab7_Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1244.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1250.766 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1244.844 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1250.766 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1244.844 ; gain = 675.457
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1250.766 ; gain = 679.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1244.844 ; gain = 675.457
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1250.766 ; gain = 679.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for XADC_subsystem_inst/XADC_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_clk_wiz. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1244.844 ; gain = 675.457
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1250.766 ; gain = 679.859
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'r2r_sar_adc_simple'
 ---------------------------------------------------------------------------------------------------
@@ -198,7 +209,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'r2r_s
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'r2r_sar_adc_simple'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1244.844 ; gain = 675.457
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1250.766 ; gain = 679.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -285,7 +296,7 @@ WARNING: [Synth 8-7129] Port switches_inputs[2] in module Menu_Subsystem is eith
 WARNING: [Synth 8-7129] Port switches_inputs[1] in module Menu_Subsystem is either unconnected or has no load
 WARNING: [Synth 8-7129] Port switches_inputs[0] in module Menu_Subsystem is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1257.113 ; gain = 687.727
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1261.844 ; gain = 690.938
 ---------------------------------------------------------------------------------
  Sort Area is  PWM_averager_subsystem/sawtooth_scaled_adc_data_reg_0 : 0 0 : 625 625 : Used 1 time 0
  Sort Area is  R2R_averager_subsystem/scaled_data_reg_4 : 0 0 : 625 625 : Used 1 time 0
@@ -311,19 +322,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1407.012 ; gain = 837.625
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1411.445 ; gain = 840.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1502.879 ; gain = 933.492
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1507.203 ; gain = 936.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1502.879 ; gain = 933.492
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1507.203 ; gain = 936.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -341,37 +352,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -407,15 +418,16 @@ Report BlackBoxes:
 +------+--------------+----------+
 |      |BlackBox name |Instances |
 +------+--------------+----------+
-|1     |xadc_wiz_0    |         1|
+|1     |clk_wiz_0     |         1|
+|2     |xadc_wiz_0    |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |xadc_wiz |     1|
-|2     |BUFG     |     1|
+|1     |clk_wiz  |     1|
+|2     |xadc_wiz |     1|
 |3     |CARRY4   |    67|
 |4     |DSP48E1  |     3|
 |5     |LUT1     |    55|
@@ -428,31 +440,33 @@ Report Cell Usage:
 |12    |FDCE     |   124|
 |13    |FDRE     |   761|
 |14    |FDSE     |    33|
-|15    |IBUF     |    15|
+|15    |IBUF     |    14|
 |16    |OBUF     |    21|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1644.148 ; gain = 989.828
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1644.148 ; gain = 1074.762
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1648.055 ; gain = 989.887
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1648.055 ; gain = 1077.148
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1653.336 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1648.055 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1657.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1648.055 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c5f23c37
+Synth Design complete | Checksum: 87c5eb69
 INFO: [Common 17-83] Releasing license: Synthesis
-90 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 27 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1657.012 ; gain = 1278.801
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1657.012 ; gain = 0.000
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1648.055 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.runs/synth_1/Lab7_Top_Level.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Lab7_Top_Level_utilization_synth.rpt -pb Lab7_Top_Level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  4 14:53:36 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  5 01:54:27 2025...

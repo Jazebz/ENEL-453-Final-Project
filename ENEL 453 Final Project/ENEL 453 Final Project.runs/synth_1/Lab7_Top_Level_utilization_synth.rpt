@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Dec  4 14:53:36 2025
+| Date         : Fri Dec  5 01:54:27 2025
 | Host         : HXI-CENTRE running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Lab7_Top_Level_utilization_synth.rpt -pb Lab7_Top_Level_utilization_synth.pb
 | Design       : Lab7_Top_Level
@@ -96,7 +96,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   36 |     0 |          0 |       106 | 33.96 |
+| Bonded IOB                  |   35 |     0 |          0 |       106 | 33.02 |
 | Bonded IPADs                |    0 |     0 |          0 |        10 |  0.00 |
 | Bonded OPADs                |    0 |     0 |          0 |         4 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
@@ -121,7 +121,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
@@ -167,9 +167,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | LUT1     |   55 |                 LUT |
 | FDSE     |   33 |        Flop & Latch |
 | OBUF     |   21 |                  IO |
-| IBUF     |   15 |                  IO |
+| IBUF     |   14 |                  IO |
 | DSP48E1  |    3 |    Block Arithmetic |
-| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
@@ -180,6 +179,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 |  Ref Name  | Used |
 +------------+------+
 | xadc_wiz_0 |    1 |
+| clk_wiz_0  |    1 |
 +------------+------+
 
 

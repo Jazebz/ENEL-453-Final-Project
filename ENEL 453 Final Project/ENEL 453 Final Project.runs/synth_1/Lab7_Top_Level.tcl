@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.statsThreshold 360
 set_param chipscope.maxJobs 5
 set_param synth.incrementalSynthesisCache C:/Users/hxi-c/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-22852-HXI-CENTRE/incrSyn
 set_param checkpoint.writeSynthRtdsInDcp 1
@@ -72,6 +73,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.cache/wt} [current_project]
 set_property parent.project_path {C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.xpr} [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.cache/ip} [current_project]
@@ -113,6 +115,11 @@ read_verilog -library xil_defaultlib -sv {
 read_ip -quiet {{C:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci}}
 set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc}}]
+
+read_ip -quiet {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/git/ENEL-453-Final-Project/ENEL 453 Final Project/ENEL 453 Final Project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

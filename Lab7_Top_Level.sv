@@ -39,6 +39,22 @@ module Lab7_Top_Level(
 );
 
     //==========================================================
+    // Clocking Wizard / PLL
+    // - Input:  100 MHz board clock (clk)
+    // - Output: faster single system clock (clk_sys)
+    // - locked: indicates PLL has achieved lock
+    //==========================================================
+    logic clk_sys;      // fast system clock from PLL
+    logic pll_locked;   // PLL lock indicator
+
+    clk_wiz_0 u_clk_wiz (
+        .clk_in1 (clk),        // 100 MHz from board
+        .reset   (reset),      // same reset as rest of system (OK for lab)
+        .clk_out1(clk_sys),    // e.g. 125 MHz or 133 MHz
+        .locked  (pll_locked)
+    );
+
+    //==========================================================
     // Internal signals
     //==========================================================
     // XADC
@@ -86,7 +102,7 @@ module Lab7_Top_Level(
     // Calibration button pulse (sync + edge detect)
     //==========================================================
     cal_button_pulse cal_btn_inst (
-        .clk       (clk),
+        .clk       (clk_sys),
         .reset     (reset),
         .btn_in    (cal_button),
         .pulse_out (cal_trig_pulse)
@@ -96,7 +112,7 @@ module Lab7_Top_Level(
     // PWM Subsystem
     //==========================================================
     PWM_subsystem PWM_subsystem_inst (
-        .clk                      (clk),
+        .clk                      (clk_sys),
         .reset                    (reset),
         .compare1                 (compare1),
         .sar_mode                 (sar_mode_pwm),        // 0 = Ramp, 1 = SAR
@@ -117,7 +133,7 @@ module Lab7_Top_Level(
     // XADC Subsystem
     //==========================================================
     XADC_Subsystem XADC_subsystem_inst (
-        .clk             (clk),
+        .clk             (clk_sys),
         .reset           (reset),
         .vauxp15         (vauxp15),
         .vauxn15         (vauxn15),
@@ -130,7 +146,7 @@ module Lab7_Top_Level(
     // R2R Subsystem
     //==========================================================
     R2R_subsystem R2R_subsystem_inst (
-        .clk         (clk),
+        .clk         (clk_sys),
         .reset       (reset),
         .compare2    (compare2),
         .sar_mode    (sar_mode_r2r),       // 0 = Ramp, 1 = SAR
@@ -152,7 +168,7 @@ module Lab7_Top_Level(
     auto_cal #(
         .WIDTH(16)
     ) PWM_auto_cal (
-        .clk          (clk),
+        .clk          (clk_sys),
         .reset        (reset),
         .cal_trig     (cal_trig_pulse),
         .cal_switch   (cal_switch),
@@ -164,7 +180,7 @@ module Lab7_Top_Level(
     auto_cal #(
         .WIDTH(16)
     ) R2R_auto_cal (
-        .clk          (clk),
+        .clk          (clk_sys),
         .reset        (reset),
         .cal_trig     (cal_trig_pulse),
         .cal_switch   (cal_switch),
@@ -177,7 +193,7 @@ module Lab7_Top_Level(
     // Menu / Data Selection Subsystem
     //==========================================================
     Menu_Subsystem Menu_Subsystem_inst (
-        .clk               (clk),
+        .clk               (clk_sys),
         .reset             (reset),
         .R2R_raw           (R2R_raw),
         .R2R_averaged      (R2R_averaged),
@@ -199,7 +215,7 @@ module Lab7_Top_Level(
     // Binary to BCD Converter
     //==========================================================
     bin_to_bcd BIN_TO_BCD_inst (
-        .clk               (clk),
+        .clk               (clk_sys),
         .reset             (reset),
         .bin_in            (Menu_OUT),
         .bcd_out           (BCD_OUT),
@@ -210,7 +226,7 @@ module Lab7_Top_Level(
     // Seven-Segment Display Subsystem
     //==========================================================
     seven_segment_display_subsystem SEVEN_SEGMENT_DISPLAY_inst (
-        .clk           (clk),
+        .clk           (clk_sys),
         .reset         (reset),
         .sec_dig1      (BCD_OUT[3:0]),
         .sec_dig2      (BCD_OUT[7:4]),

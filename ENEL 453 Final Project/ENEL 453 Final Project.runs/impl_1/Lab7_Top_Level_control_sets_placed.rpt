@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Dec  4 14:54:05 2025
+| Date         : Fri Dec  5 01:55:01 2025
 | Host         : HXI-CENTRE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Lab7_Top_Level_control_sets_placed.rpt
 | Design       : Lab7_Top_Level
@@ -59,36 +59,36 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              17 |           17 |
-| No           | No                    | Yes                    |              82 |           29 |
-| No           | Yes                   | No                     |             342 |           77 |
+| No           | No                    | Yes                    |              82 |           31 |
+| No           | Yes                   | No                     |             366 |          106 |
 | Yes          | No                    | No                     |              16 |           16 |
-| Yes          | No                    | Yes                    |              42 |           12 |
-| Yes          | Yes                   | No                     |             419 |           98 |
+| Yes          | No                    | Yes                    |              42 |           16 |
+| Yes          | Yes                   | No                     |             419 |          105 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |                            Enable Signal                           |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+--------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |                                                                    | Menu_Subsystem_inst/Menu_Module/SR[0]                |                1 |              5 |         5.00 |
-|  clk_IBUF_BUFG | PWM_subsystem_inst/Fall_Detector/raw_value1[7]_i_1_n_0             | reset_IBUF                                           |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | PWM_subsystem_inst/PWM_Ramp/downcounter_inst/E[0]                  | PWM_subsystem_inst/PWM_Ramp/duty_cycle[7]_i_1_n_0    |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | PWM_subsystem_inst/PWM_SAR/result_code[7]_i_1_n_0                  | reset_IBUF                                           |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | R2R_subsystem_inst/Fall_Detector2/raw_data[7]_i_1_n_0              | reset_IBUF                                           |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | R2R_subsystem_inst/R2R_SAR/result_code[7]_i_1__0_n_0               | reset_IBUF                                           |                1 |              8 |         8.00 |
-|  clk_IBUF_BUFG | R2R_subsystem_inst/R2R_ramp/downcounter_inst/E[0]                  | R2R_subsystem_inst/R2R_ramp/duty_cycle[7]_i_1__0_n_0 |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | BIN_TO_BCD_inst/bcd_out[15]_i_1_n_0                                | reset_IBUF                                           |                5 |             16 |         3.20 |
-|  clk_IBUF_BUFG | R2R_subsystem_inst/R2R_ramp/downcounter_inst/count[17]_i_1__0_n_0  | reset_IBUF                                           |                4 |             18 |         4.50 |
-|  clk_IBUF_BUFG | PWM_subsystem_inst/PWM_Ramp/downcounter_inst/switches_inputs[1][0] | reset_IBUF                                           |                8 |             26 |         3.25 |
-|  clk_IBUF_BUFG | cal_btn_inst/E[0]                                                  | reset_IBUF                                           |                8 |             26 |         3.25 |
-|  clk_IBUF_BUFG | BIN_TO_BCD_inst/scratch[31]_i_1_n_0                                | Menu_Subsystem_inst/Menu_Module/SR[0]                |                7 |             32 |         4.57 |
-|  clk_IBUF_BUFG | XADC_subsystem_inst/AVERAGER/ready_r_reg                           |                                                      |               32 |            144 |         4.50 |
-|  clk_IBUF_BUFG |                                                                    |                                                      |               33 |            145 |         4.39 |
-|  clk_IBUF_BUFG | XADC_subsystem_inst/AVERAGER/ready_r_reg                           | reset_IBUF                                           |               66 |            295 |         4.47 |
-|  clk_IBUF_BUFG |                                                                    | reset_IBUF                                           |              105 |            419 |         3.99 |
-+----------------+--------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
++--------------------------+--------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                            Enable Signal                           |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+--------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
+|  u_clk_wiz/inst/clk_out1 |                                                                    | Menu_Subsystem_inst/Menu_Module/SR[0]                |                1 |              5 |         5.00 |
+|  u_clk_wiz/inst/clk_out1 | R2R_subsystem_inst/Fall_Detector2/raw_data[7]_i_1_n_0              | reset_IBUF                                           |                4 |              8 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | R2R_subsystem_inst/R2R_SAR/result_code[7]_i_1__0_n_0               | reset_IBUF                                           |                4 |              8 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | R2R_subsystem_inst/R2R_ramp/downcounter_inst/E[0]                  | R2R_subsystem_inst/R2R_ramp/duty_cycle[7]_i_1__0_n_0 |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | PWM_subsystem_inst/Fall_Detector/raw_value1[7]_i_1_n_0             | reset_IBUF                                           |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | PWM_subsystem_inst/PWM_SAR/result_code[7]_i_1_n_0                  | reset_IBUF                                           |                1 |              8 |         8.00 |
+|  u_clk_wiz/inst/clk_out1 | PWM_subsystem_inst/PWM_Ramp/downcounter_inst/E[0]                  | PWM_subsystem_inst/PWM_Ramp/duty_cycle[7]_i_1_n_0    |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | BIN_TO_BCD_inst/bcd_out[15]_i_1_n_0                                | reset_IBUF                                           |                5 |             16 |         3.20 |
+|  u_clk_wiz/inst/clk_out1 | R2R_subsystem_inst/R2R_ramp/downcounter_inst/count[17]_i_1__0_n_0  | reset_IBUF                                           |                4 |             18 |         4.50 |
+|  u_clk_wiz/inst/clk_out1 | cal_btn_inst/E[0]                                                  | reset_IBUF                                           |               11 |             26 |         2.36 |
+|  u_clk_wiz/inst/clk_out1 | PWM_subsystem_inst/PWM_Ramp/downcounter_inst/switches_inputs[1][0] | reset_IBUF                                           |                7 |             26 |         3.71 |
+|  u_clk_wiz/inst/clk_out1 | BIN_TO_BCD_inst/scratch[31]_i_1_n_0                                | Menu_Subsystem_inst/Menu_Module/SR[0]                |                7 |             32 |         4.57 |
+|  u_clk_wiz/inst/clk_out1 | XADC_subsystem_inst/AVERAGER/ready_r_reg                           |                                                      |               32 |            144 |         4.50 |
+|  u_clk_wiz/inst/clk_out1 |                                                                    |                                                      |               33 |            145 |         4.39 |
+|  u_clk_wiz/inst/clk_out1 | XADC_subsystem_inst/AVERAGER/ready_r_reg                           | reset_IBUF                                           |               72 |            295 |         4.10 |
+|  u_clk_wiz/inst/clk_out1 |                                                                    | reset_IBUF                                           |              136 |            443 |         3.26 |
++--------------------------+--------------------------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
 
 
