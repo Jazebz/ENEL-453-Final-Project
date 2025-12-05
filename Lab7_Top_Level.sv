@@ -5,7 +5,7 @@
 //   - Interfaces with XADC, PWM ramp/SAR, and R2R ramp/SAR subsystems
 //   - Selects which measurement to display via a menu FSM
 //   - Converts selected data to BCD
-//   - Drives the 4-digit seven-segment display
+//   - Drives the 4-digit seven-segment Display
 //==============================================================
 
 module Lab7_Top_Level(
@@ -14,7 +14,7 @@ module Lab7_Top_Level(
     // Clock & Reset
     // ----------------------
     input  logic        clk,                // System clock
-    input  logic        reset,             // Active-high synchronous reset
+    input  logic        reset,             // Active-high synchronous Reset
     
     // ----------------------
     // Mode control / PWM
