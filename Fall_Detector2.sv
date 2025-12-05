@@ -7,7 +7,7 @@
 //
 // Description:
 //   - Monitors compare2 on each clock edge.
-//   - When a transition from HIGH → LOW is detected on compare2,
+//   - When a transition from HIGH → LOW transition is detected on compare2,
 //     the current R2R_output value is latched into raw_data.
 //   - Intended for use in ramp-based ADC operation with an R2R
 //     ladder, where the captured code corresponds to the point
