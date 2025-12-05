@@ -22,7 +22,7 @@
 //   - Menu_OUT is the 16-bit value that will be sent to the
 //     BIN→BCD converter in the top-level design.
 //   - output_mode_fsm, *_Data_mux modules, Data_Selecting_Mux,
-//     and switch_logic are assumed to be defined elsewhere.
+//     and switch_logic are assumed to be defined somewhere else.
 //==============================================================
 module Menu_Subsystem(
     input  logic        clk,
