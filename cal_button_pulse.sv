@@ -3,7 +3,7 @@
 // cal_button_pulse.sv
 // -----------------------------------------------------------------------------
 // - Synchronizes an asynchronous pushbutton to clk
-// - Generates a clean 1-clock-wide pulse on each rising edge
+// - Generates a clean 1-clock-wide pulse on each rising edge 
 //////////////////////////////////////////////////////////////////////////////////
 
 module cal_button_pulse(
