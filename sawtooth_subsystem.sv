@@ -13,7 +13,7 @@
 //       * pwm_out                    : PWM waveform to analog filter
 //       * sawtooth_ave_data          : averaged ADC result
 //       * sawtooth_scaled_adc_data   : scaled ADC result
-//       * adc_value                  : raw 8-bit ADC code (for menus, etc.)
+//       * adc_value                  : raw 8-bit ADC code (For menus, etc.)
 //==============================================================
 module PWM_subsystem(
     input  logic        clk,
