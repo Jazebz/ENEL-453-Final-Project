@@ -51,7 +51,7 @@ module averager_subsystem(
     );
 
     //==========================================================
-    // Scaling to millivolts
+    // Scaling to Millivolts
     // ---------------------------------------------------------
     // Assumes:
     //   - Full-scale code corresponds to 3.3 V (3300 mV)
