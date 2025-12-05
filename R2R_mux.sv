@@ -2,7 +2,7 @@
 // R2R_Data_mux
 // -------------------------------------------------------------
 // Purpose:
-//   Selects which version of the R2R ladder ADC measurement is
+//   Chooses which version of the R2R ladder ADC measurement is
 //   forwarded to the display system, based on data_select.
 //
 // Functionality:
